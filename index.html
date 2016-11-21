@@ -67,7 +67,7 @@
 </div>
 
 <script async src="https://www.google-analytics.com/analytics.js"></script>
-<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+<script src="js/jquery-1.12.4.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <script src="js/autoplay.js"></script>
 
@@ -268,47 +268,7 @@
 	ga('create', 'UA-50308229-1', 'autoplay-express');
 	ga('send', 'pageview');
 
-	$(function() {
-		var locals = {
-			year: (new Date()).getFullYear(),
-			download_setup: 'download/autoplay_setup.exe',
-			order_personal: 'https://secure.payproglobal.com/orderpage.aspx?products=47884',
-			order_site: 'https://secure.payproglobal.com/orderpage.aspx?products=47887'
-		};
-		var routes = {
-			index: {id: 'content/index', locals: locals},
-			overview: {id: 'content/overview', locals: locals},
-			download: {id: 'content/download', locals: locals},
-			contact: {id: 'content/contact', locals: locals},
-			order: {id: 'content/order', locals: locals}
-		};
-		var contentElement = document.getElementById('page-content');
-
-		function onHashChange() {
-			var hash = location.hash.slice(1) || 'index';
-			var route = routes[hash] || routes['index'];
-			if (route) {
-				contentElement.innerHTML = parseTemplate(route.id, route.locals);
-				$('#header li').removeClass('active');
-				$('#header a[href="#' + hash + '"]').parent().addClass('active');
-			}
-		}
-
-		function parseTemplate(id, locals) {
-			var html = document.getElementById(id).innerHTML;
-			Object.keys(locals).forEach(function(key) {
-				var regExp = new RegExp('{{' + key + '}}', 'g');
-				html = html.replace(regExp, locals[key]);
-			});
-			return html;
-		}
-
-		(function init() {
-			document.getElementById('footer').innerHTML = parseTemplate('footer', locals);
-			onHashChange();
-			window.addEventListener('hashchange', onHashChange);
-		})();
-	});
+	
 </script>
 
 </body>
