@@ -1,0 +1,82 @@
+/* Bootstrap fixes */
+
+:focus {
+	outline: none !important;
+}
+
+.navbar-nav li.active {
+	font-weight: 700;
+}
+
+.top-fix {
+	margin-top: 0;
+}
+
+.popover {
+	max-width: 400px;
+	background-color: #fcf8e3;
+}
+
+.popover.top > .arrow:after {
+	border-top-color: #FCF8E3;
+}
+
+/* ------------------ */
+
+/* my css */
+
+body {
+	padding: 20px 0;
+}
+
+.index-intro {
+	padding: 50px 0;
+	background-color: #EEEEEE;
+}
+
+.index-intro h1 {
+	font-size: 42px;
+	font-weight: 700;
+}
+
+.index-intro .btn-prettify {
+	margin-left: 4px;
+	margin-top: 10px;
+	width: 170px;
+}
+
+.footer {
+	border-top: 1px solid #EEEEEE;
+	margin-top: 20px;
+	padding-top: 20px;
+}
+
+.image-left {
+	float: left;
+	margin: 0 20px 20px 0;
+}
+
+.image-right {
+	float: right;
+	margin: 0 0 20px 20px;
+}
+
+.autoplay-screen img {
+	margin-bottom: 10px;
+}
+
+.vert-center td {
+	vertical-align: middle !important;
+}
+
+.lic-info {
+	cursor: pointer;
+}
+
+#result {
+	display: none;
+}
+
+.btn-100px {
+	width: 100px;
+}
